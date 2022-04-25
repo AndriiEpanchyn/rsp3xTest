@@ -16,7 +16,7 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
 public class NavigationView extends ViewPart {
-	public static final String ID = "rcp3xtest.navigationView";
+	public static final String ID = "rcp3xtest.NavigationView";
 	private TreeViewer viewer;
 
 	class TreeObject {

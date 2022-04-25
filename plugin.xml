@@ -15,7 +15,7 @@
          point="org.eclipse.ui.perspectives">
       <perspective
             class="rcp3xtest.Perspective"
-            id="rcp3xtest.perspective"
+            id="rcp3xtest.Perspective"
             name="Perspective">
       </perspective>
    </extension>
@@ -23,19 +23,47 @@
          point="org.eclipse.ui.views">
       <view
             allowMultiple="true"
-            class="rcp3xTest.View2"
-            id="rcp3xTest.View2"
+            class="rcp3xtest.View2"
+            id="rcp3xtest.View2"
             name="View2">
       </view>
       <view
             allowMultiple="true"
-            class="rcp3xtest.navigationView"
-            id="rcp3xtest.navigationView"
+            class="rcp3xtest.NavigationView"
+            id="rcp3xtest.NavigationView"
             name="Navigator">
       </view>
    </extension>
    <extension
+         id="*"
          point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="rcp3xtest.perspective">
+         <view
+               closeable="false"
+               id="rcp3xtest.navigationView"
+               minimized="false"
+               moveable="false"
+               ratio="0.4"
+               relationship="stack"
+               relative="rcp3xtest.NavigationView"
+               showTitle="true"
+               standalone="false"
+               visible="true">
+         </view>
+         <view
+               closeable="false"
+               id="rcp3xTest.view2"
+               minimized="false"
+               moveable="false"
+               ratio="0.6"
+               relationship="stack"
+               relative="rcp3xtest.View2"
+               showTitle="true"
+               standalone="false"
+               visible="true">
+         </view>
+      </perspectiveExtension>
    </extension>
    <extension
          point="org.eclipse.ui.menus">
@@ -50,6 +78,11 @@
             <command
                   commandId="org.eclipse.ui.file.exit"
                   label="Exit">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.newWizard"
+                  label="New file"
+                  style="push">
             </command>
             
          </menu>

@@ -27,6 +27,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 		configurer.setShowCoolBar(false);
 		configurer.setShowStatusLine(true);
 		configurer.setTitle("RCP3.x App");
+		configurer.setShowPerspectiveBar(true);
 	}
 	
 	@Override

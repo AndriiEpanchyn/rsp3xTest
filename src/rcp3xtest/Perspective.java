@@ -7,7 +7,7 @@ import org.eclipse.ui.IPerspectiveFactory;
 public class Perspective implements IPerspectiveFactory {
 	 
 	
-	public static final String ID = "rcp3xtest.perspective";
+	public static final String ID = "rcp3xtest.Perspective";
 	
 	@Override
 	public void createInitialLayout(IPageLayout layout) {
@@ -22,8 +22,8 @@ public class Perspective implements IPerspectiveFactory {
 		IFolderLayout folder = layout.createFolder("messages",
 				IPageLayout.TOP, 0.5f, editorArea);
 		
-		folder.addPlaceholder(View.ID + ":*");
-		folder.addView(View.ID);
+		folder.addPlaceholder(View2.ID + ":*");
+		folder.addView(View2.ID);
 		
 		layout.getViewLayout(NavigationView.ID).setCloseable(false);
 	}

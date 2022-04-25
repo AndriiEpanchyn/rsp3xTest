@@ -9,7 +9,7 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.part.ViewPart;
 
 public class View2 extends ViewPart {
-	public static final String ID = "rcp3xTest.View2";
+	public static final String ID = "rcp3xtest.View2";
 	
 	@Inject IWorkbench workbench;
 	Text text;
